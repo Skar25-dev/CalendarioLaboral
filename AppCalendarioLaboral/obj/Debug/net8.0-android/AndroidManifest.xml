@@ -5,11 +5,13 @@
     Changes to this file may cause incorrect behavior and will be lost if
     the contents are regenerated.
     -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.companyname.appcalendariolaboral" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="0.1" android:versionCode="1" package="com.companyname.appcalendariolaboral">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true" android:name="crc64c4555818b5c6e78a.MainApplication" android:label="AppCalendarioLaboral" android:debuggable="true" android:extractNativeLibs="true">
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="CalendarioLaboral" android:name="crc64c4555818b5c6e78a.MainApplication" android:debuggable="true" android:extractNativeLibs="true">
     <activity android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:launchMode="singleTop" android:theme="@style/Maui.SplashTheme" android:name="crc64c4555818b5c6e78a.MainActivity" android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

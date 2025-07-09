@@ -55,6 +55,9 @@
     <AppxPackagedFile Include="C:\Users\Dani\source\repos\AppCalendarioLaboral\AppCalendarioLaboral\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\source\repos\AppCalendarioLaboral\AppCalendarioLaboral\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\MauiMaterialAssets.ttf">
+      <PackagePath>MauiMaterialAssets.ttf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dani\source\repos\AppCalendarioLaboral\AppCalendarioLaboral\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
     </AppxPackagedFile>
@@ -322,6 +325,21 @@
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.licensing\30.1.37\lib\net8.0\Syncfusion.Licensing.dll">
+      <PackagePath>Syncfusion.Licensing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.maui.calendar\30.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Calendar.dll">
+      <PackagePath>Syncfusion.Maui.Calendar.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.maui.core\30.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Core.dll">
+      <PackagePath>Syncfusion.Maui.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.maui.popup\30.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Popup.dll">
+      <PackagePath>Syncfusion.Maui.Popup.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.maui.scheduler\30.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Scheduler.dll">
+      <PackagePath>Syncfusion.Maui.Scheduler.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.maui.controls.core\8.0.100\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>
     </AppxPackagedFile>
@@ -424,11 +442,26 @@
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.maui.controls.core\8.0.100\lib\net8.0-windows10.0.19041\zh-Hant\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>zh-Hant\Microsoft.Maui.Controls.resources.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.maui.scheduler\30.1.37\lib\net8.0-windows10.0.19041.0\en-US\Syncfusion.Maui.Scheduler.resources.dll">
+      <PackagePath>en-US\Syncfusion.Maui.Scheduler.resources.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.graphics.win2d\1.2.0\runtimes\win-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\XamlDiagnostics\Mobile\Microsoft.Maui.Controls.HotReload.Forms.dll">
+      <PackagePath>Microsoft.Maui.Controls.HotReload.Forms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\XamlDiagnostics\Mobile\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll">
+      <PackagePath>Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\XamlDiagnostics\Mobile\Microsoft.VisualStudio.DesignTools.TapContract.dll">
+      <PackagePath>Microsoft.VisualStudio.DesignTools.TapContract.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\XamlDiagnostics\Mobile\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll">
+      <PackagePath>Microsoft.VisualStudio.DesignTools.XamlTapContract.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.maui.controls.compatibility\8.0.100\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -438,6 +471,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\microsoft.maui.core\8.0.100\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dani\.nuget\packages\syncfusion.maui.core\30.1.37\lib\net8.0-windows10.0.19041.0\Syncfusion.Maui.Core.pri">
+      <PackagePath>Syncfusion.Maui.Core.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

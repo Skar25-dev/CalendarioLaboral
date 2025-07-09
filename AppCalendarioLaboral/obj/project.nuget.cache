@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9l4GTW6fQVE=",
+  "dgSpecHash": "bBOoQDlA2B8=",
   "success": true,
   "projectFilePath": "C:\\Users\\Dani\\source\\repos\\AppCalendarioLaboral\\AppCalendarioLaboral\\AppCalendarioLaboral.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,11 @@
     "C:\\Users\\Dani\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.17\\microsoft.net.illink.tasks.8.0.17.nupkg.sha512",
     "C:\\Users\\Dani\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\Dani\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\microsoft.windowsappsdk.1.5.240802000.nupkg.sha512",
+    "C:\\Users\\Dani\\.nuget\\packages\\syncfusion.licensing\\30.1.37\\syncfusion.licensing.30.1.37.nupkg.sha512",
+    "C:\\Users\\Dani\\.nuget\\packages\\syncfusion.maui.calendar\\30.1.37\\syncfusion.maui.calendar.30.1.37.nupkg.sha512",
+    "C:\\Users\\Dani\\.nuget\\packages\\syncfusion.maui.core\\30.1.37\\syncfusion.maui.core.30.1.37.nupkg.sha512",
+    "C:\\Users\\Dani\\.nuget\\packages\\syncfusion.maui.popup\\30.1.37\\syncfusion.maui.popup.30.1.37.nupkg.sha512",
+    "C:\\Users\\Dani\\.nuget\\packages\\syncfusion.maui.scheduler\\30.1.37\\syncfusion.maui.scheduler.30.1.37.nupkg.sha512",
     "C:\\Users\\Dani\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",
     "C:\\Users\\Dani\\.nuget\\packages\\xamarin.android.glide.annotations\\4.15.1.2\\xamarin.android.glide.annotations.4.15.1.2.nupkg.sha512",
     "C:\\Users\\Dani\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.15.1.2\\xamarin.android.glide.disklrucache.4.15.1.2.nupkg.sha512",

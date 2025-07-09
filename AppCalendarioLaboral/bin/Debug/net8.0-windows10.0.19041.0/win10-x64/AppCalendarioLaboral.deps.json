@@ -12,6 +12,12 @@
           "Microsoft.Extensions.Logging.Debug": "8.0.1",
           "Microsoft.Maui.Controls": "8.0.100",
           "Microsoft.Maui.Controls.Compatibility": "8.0.100",
+          "Syncfusion.Maui.Calendar": "30.1.37",
+          "Syncfusion.Maui.Scheduler": "30.1.37",
+          "Microsoft.Maui.Controls.HotReload.Forms": "17.0.0.0",
+          "Microsoft.VisualStudio.DesignTools.MobileTapContracts": "17.0.0.0",
+          "Microsoft.VisualStudio.DesignTools.TapContract": "17.0.0.0",
+          "Microsoft.VisualStudio.DesignTools.XamlTapContract": "17.0.0.0",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
         "runtime": {
@@ -444,6 +450,97 @@
             "fileVersion": "1.5.0.0"
           }
         }
+      },
+      "Syncfusion.Licensing/30.1.37": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "30.1.37.0",
+            "fileVersion": "30.1.37.0"
+          }
+        }
+      },
+      "Syncfusion.Maui.Calendar/30.1.37": {
+        "dependencies": {
+          "Syncfusion.Maui.Core": "30.1.37",
+          "Syncfusion.Maui.Popup": "30.1.37"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "assemblyVersion": "30.1.37.0",
+            "fileVersion": "30.1.37.0"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/30.1.37": {
+        "dependencies": {
+          "Syncfusion.Licensing": "30.1.37"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "assemblyVersion": "30.1.37.0",
+            "fileVersion": "30.1.37.0"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/30.1.37": {
+        "dependencies": {
+          "Syncfusion.Maui.Core": "30.1.37"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "assemblyVersion": "30.1.37.0",
+            "fileVersion": "30.1.37.0"
+          }
+        }
+      },
+      "Syncfusion.Maui.Scheduler/30.1.37": {
+        "dependencies": {
+          "Syncfusion.Maui.Calendar": "30.1.37",
+          "Syncfusion.Maui.Core": "30.1.37"
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Scheduler.dll": {
+            "assemblyVersion": "30.1.37.0",
+            "fileVersion": "30.1.37.0"
+          }
+        },
+        "resources": {
+          "lib/net8.0-windows10.0.19041.0/en-US/Syncfusion.Maui.Scheduler.resources.dll": {
+            "locale": "en-US"
+          }
+        }
+      },
+      "Microsoft.Maui.Controls.HotReload.Forms/17.0.0.0": {
+        "runtime": {
+          "Microsoft.Maui.Controls.HotReload.Forms.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.14.40353.11967"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.DesignTools.MobileTapContracts/17.0.0.0": {
+        "runtime": {
+          "Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.14.40353.11967"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.DesignTools.TapContract/17.0.0.0": {
+        "runtime": {
+          "Microsoft.VisualStudio.DesignTools.TapContract.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.14.40353.11967"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.DesignTools.XamlTapContract/17.0.0.0": {
+        "runtime": {
+          "Microsoft.VisualStudio.DesignTools.XamlTapContract.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.14.40353.11967"
+          }
+        }
       }
     }
   },
@@ -618,6 +715,61 @@
       "sha512": "sha512-XW6cNzbGKDuzn+iCY1L9pNDm3pF78te8PXjKWEYk+rgePVPV/j2otr75Q5NMbWzsMF461Qq7aPJZKUQAQJNISQ==",
       "path": "microsoft.windowsappsdk/1.5.240802000",
       "hashPath": "microsoft.windowsappsdk.1.5.240802000.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/30.1.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QYAjEsjSXhXr8Bwsv53cNSic03Q7AS9R1bhEFx8RZ9uxx8hxDKtst0u+pVGJiG46QMRT54SUL3bbSD/QduHV2A==",
+      "path": "syncfusion.licensing/30.1.37",
+      "hashPath": "syncfusion.licensing.30.1.37.nupkg.sha512"
+    },
+    "Syncfusion.Maui.Calendar/30.1.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UYIIug/e/UZ0yiIwIHe5wCEiTVduXj1U1avGhUkQ5eqlF0YrudS7sxkdW3SoKC3hjl1QgaugsDsqFcqHIkNNaQ==",
+      "path": "syncfusion.maui.calendar/30.1.37",
+      "hashPath": "syncfusion.maui.calendar.30.1.37.nupkg.sha512"
+    },
+    "Syncfusion.Maui.Core/30.1.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BJNYWHP21Meu2VeGDG3P++n12Dj21ot+9mcwtILNnV1JYCbgv/gUyw1f5+Ea5c+ZV4wWZZcgnSryuSmsPm119A==",
+      "path": "syncfusion.maui.core/30.1.37",
+      "hashPath": "syncfusion.maui.core.30.1.37.nupkg.sha512"
+    },
+    "Syncfusion.Maui.Popup/30.1.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4JtoF344TxMRkNJ+ut66xnbbYzFrcsIJ+P9Vb3YDt/Bv02M49iod905ox6TwMUvFcQwZCCJsPj6hMkGCIX8swQ==",
+      "path": "syncfusion.maui.popup/30.1.37",
+      "hashPath": "syncfusion.maui.popup.30.1.37.nupkg.sha512"
+    },
+    "Syncfusion.Maui.Scheduler/30.1.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-is+MelFhjsSS5q/iiUac//Wzd9tJqNGFlJVMw1amJJdlPJKnZ2DdIMPjnxPtn4fZGQVPTcw0nU2GX30g/0iTcw==",
+      "path": "syncfusion.maui.scheduler/30.1.37",
+      "hashPath": "syncfusion.maui.scheduler.30.1.37.nupkg.sha512"
+    },
+    "Microsoft.Maui.Controls.HotReload.Forms/17.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.VisualStudio.DesignTools.MobileTapContracts/17.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.VisualStudio.DesignTools.TapContract/17.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.VisualStudio.DesignTools.XamlTapContract/17.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
