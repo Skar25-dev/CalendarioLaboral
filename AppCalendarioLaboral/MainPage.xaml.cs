@@ -20,6 +20,22 @@ namespace AppCalendarioLaboral
         private const string NombreArchivo = "turnos.json";
         private readonly string rutaArchivo = Path.Combine(FileSystem.AppDataDirectory, NombreArchivo);
         private string rutaUltimoArchivoExportado;
+        private bool modoAutomatico = false;
+        private readonly Turno[] PatronTurnoIngles28 = new Turno[]
+        {
+            // 7 noches
+            Turno.Noche, Turno.Noche, Turno.Noche, Turno.Noche, Turno.Noche, Turno.Noche, Turno.Noche,
+            // 2 libres
+            Turno.Libre, Turno.Libre,
+            // 7 tardes
+            Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Tarde,
+            // 2 libres
+            Turno.Libre, Turno.Libre,
+            // 7 mañanas
+            Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Mañana,
+            // 3 libres
+            Turno.Libre, Turno.Libre, Turno.Libre
+        };
 
         public MainPage()
         {
@@ -105,20 +121,25 @@ namespace AppCalendarioLaboral
                         StartTime = fecha.AddHours(8),
                         EndTime = fecha.AddHours(16),
                         Subject = $"Turno {turno}",
-                        Background = turno switch
-                        {
-                            Turno.Mañana => FromHex("#99e6bb"),
-                            Turno.Tarde => FromHex("#80c4a6"),
-                            Turno.Noche => FromHex("#5c5863"),
-                            Turno.Libre => FromHex("#a85163"),
-                            Turno.Vacaciones => FromHex("#ff1f4c"),
-                            _ => FromHex("#cccccc")
-                        }
+                        Background = ColorearTurno(turno)
                     };
                     turnos.Add(nuevo);
                     await GuardarTurnosAsync();
                 }
             }
+        }
+
+        private static Brush ColorearTurno(Turno turno)
+        {
+            return turno switch
+            {
+                Turno.Mañana => FromHex("#99e6bb"),
+                Turno.Tarde => FromHex("#80c4a6"),
+                Turno.Noche => FromHex("#5c5863"),
+                Turno.Libre => FromHex("#a85163"),
+                Turno.Vacaciones => FromHex("#ff1f4c"),
+                _ => FromHex("#cccccc")
+            };
         }
 
         private void VerResumenMensual_Clicked(object sender, EventArgs e)
@@ -230,15 +251,7 @@ namespace AppCalendarioLaboral
                             StartTime = turno.Fecha.AddHours(8),
                             EndTime = turno.Fecha.AddHours(16),
                             Subject = $"Turno {turno.Turno}",
-                            Background = turno.Turno switch
-                            {
-                                Turno.Mañana => FromHex("#99e6bb"),
-                                Turno.Tarde => FromHex("#80c4a6"),
-                                Turno.Noche => FromHex("#5c5863"),
-                                Turno.Libre => FromHex("#a85163"),
-                                Turno.Vacaciones => FromHex("#ff1f4c"),
-                                _ => FromHex("#cccccc") 
-                            }
+                            Background = ColorearTurno(turno.Turno)
                         };
                         turnos.Add(nuevo);
                     }
@@ -262,6 +275,103 @@ namespace AppCalendarioLaboral
                 File = new ShareFile(rutaUltimoArchivoExportado)
             });
         }
+
+        private void ModoPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            modoAutomatico = ModoPicker.SelectedIndex == 1;
+
+            if (modoAutomatico)
+            {
+                MostrarConfigurarTurnoAutomatico();
+            }
+        }
+
+        private async void MostrarConfigurarTurnoAutomatico()
+        {
+            var fechaInicio = await DisplayPromptAsync("Inicio", "Introduce la fecha de inicio (YYY-MM-DD):");
+
+            if(!DateTime.TryParse(fechaInicio, out var fecha))
+            {
+                await DisplayAlert("Error", "Fecha inválida", "OK");
+                return;
+            }
+
+            string[] patrones = { "Turno Inglés", "7 días trabajo / 2 descanso" };
+            var tipo = await DisplayActionSheet("Selecciona patrón", "Cancelar", null, patrones);
+
+            if (tipo == "Turno Inglés")
+                GenerarTurnoInglesDesdeFecha(fecha);
+            else if (tipo == "5 días trabajo / 2 descanso")
+                GenerarTurnoCincoDos(fecha);
+        }
+
+        private async void GenerarTurnoInglesDesdeFecha(DateTime fechaInicio)
+        {
+            const int diasAGenerar = 365;
+
+            for (int i = 0; i < diasAGenerar; i++)
+            {
+                DateTime fecha = fechaInicio.AddDays(i);
+                Turno turno = PatronTurnoIngles28[i % PatronTurnoIngles28.Length];
+
+                var existente = turnos.FirstOrDefault(t => t.StartTime == fecha.Date);
+                if (existente != null)
+                    turnos.Remove(existente);
+
+                turnos.Add(new SchedulerAppointment
+                {
+                    StartTime = fecha.AddHours(8),
+                    EndTime = fecha.AddHours(16),
+                    Subject = $"Turno {turno}",
+                    Background = ColorearTurno(turno)
+                });
+            }
+            await GuardarTurnosAsync();
+            await DisplayAlert("Turno inglés", "Calendario generado con patrón 28 días (7N-2L-7T-2L-7M-3L).", "OK");
+        }
+
+        private async void GenerarTurnoCincoDos(DateTime fechaInicio)
+        {
+            Turno[] ciclo = { Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Mañana, Turno.Libre, Turno.Libre, 
+                              Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Tarde, Turno.Libre, Turno.Libre,
+                              Turno.Noche, Turno.Noche, Turno.Noche, Turno.Noche, Turno.Noche, Turno.Libre, Turno.Libre };
+
+            DateTime fecha = fechaInicio;
+            int dias = 365;
+
+            for (int i = 0; i < dias; i++)
+            {
+                var turno = ciclo[i % ciclo.Length];
+                
+                var existente = turnos.FirstOrDefault(t => t.StartTime == fecha.Date);
+                if (existente != null)
+                    turnos.Remove(existente);
+
+                turnos.Add(new SchedulerAppointment
+                {
+                    StartTime = fecha.AddHours(8),
+                    EndTime = fecha.AddHours(16),
+                    Subject = $"Turno {turno}",
+                    Background = ColorearTurno(turno)
+                });
+                fecha = fecha.AddDays(1);
+            }
+            await GuardarTurnosAsync();
+            await DisplayAlert("Turnos generados", "Patrón 5/2 aplicado.", "Ok");
+        }
+
+        private async void LimpiarCalendario_Clicked(object sender, EventArgs e)
+        {
+            bool confirmar = await DisplayAlert("Confirmar", "¿Quieres eliminar todos los turnos?", "Si", "Cancelar");
+
+            if (confirmar)
+            {
+                turnos.Clear();
+                await GuardarTurnosAsync();
+                await DisplayAlert("Calendario limpio", "Todos los turnos han sido eliminados.", "Ok");
+            }
+        }
+
 
     }
 }

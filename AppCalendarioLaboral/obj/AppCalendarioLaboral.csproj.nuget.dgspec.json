@@ -73,11 +73,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -87,11 +87,15 @@
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
+            },
+            "Syncfusion.Maui.Core": {
+              "target": "Package",
+              "version": "[24.1.41, )"
             },
             "Syncfusion.Maui.Scheduler": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
             }
           },
           "imports": [
@@ -105,28 +109,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.Android.Ref.34",
-              "version": "[34.0.154, 34.0.154]"
-            },
-            {
-              "name": "Microsoft.Android.Runtime.34.android-arm",
-              "version": "[34.0.154, 34.0.154]"
-            },
-            {
-              "name": "Microsoft.Android.Runtime.34.android-arm64",
-              "version": "[34.0.154, 34.0.154]"
-            },
-            {
-              "name": "Microsoft.Android.Runtime.34.android-x64",
-              "version": "[34.0.154, 34.0.154]"
-            },
-            {
-              "name": "Microsoft.Android.Runtime.34.android-x86",
-              "version": "[34.0.154, 34.0.154]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.Android": {
               "privateAssets": "all"
@@ -146,11 +128,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -160,11 +142,15 @@
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
+            },
+            "Syncfusion.Maui.Core": {
+              "target": "Package",
+              "version": "[24.1.41, )"
             },
             "Syncfusion.Maui.Scheduler": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
             }
           },
           "imports": [
@@ -207,11 +193,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
@@ -221,11 +207,15 @@
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
+            },
+            "Syncfusion.Maui.Core": {
+              "target": "Package",
+              "version": "[24.1.41, )"
             },
             "Syncfusion.Maui.Scheduler": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
             }
           },
           "imports": [
@@ -269,19 +259,23 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.100, )"
+              "version": "[8.0.5, )"
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
+            },
+            "Syncfusion.Maui.Core": {
+              "target": "Package",
+              "version": "[24.1.41, )"
             },
             "Syncfusion.Maui.Scheduler": {
               "target": "Package",
-              "version": "[30.1.37, )"
+              "version": "[24.1.41, )"
             }
           },
           "imports": [

@@ -4,38 +4,68 @@
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              x:Class="AppCalendarioLaboral.MainPage">
 
-    <VerticalStackLayout Padding="20" Spacing="15" BackgroundColor="#cfffdd">
+    <VerticalStackLayout Padding="20" Spacing="15" BackgroundColor="#C5CBFF">
 
         <Label Text="Calendario Laboral"
                FontSize="30"
                FontAttributes="Bold"
                HorizontalOptions="Center" 
-               TextColor="#ff1f4c"/>
+               TextColor="#ff1f4c" />
 
-        <Button Text="📅 Ver resumen mensual"
-                Clicked="VerResumenMensual_Clicked"
-                HorizontalOptions="Center"
-                TextColor="#ff1f4c"
-                BackgroundColor="#5c5863"/>
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="Auto,Auto"
+              Padding="10"
+              ColumnSpacing="10"
+              RowSpacing="10"
+              HorizontalOptions="Center"
+              VerticalOptions="Start">
 
-        <Button Text="📤 Exportar turnos a CSV"
-                Clicked="ExportarTurnos_Clicked"
-                HorizontalOptions="Center"
-                TextColor="#ff1f4c"
-                BackgroundColor="#5c5863"/>
+            <Button Grid.Row="0" Grid.Column="0"
+                    Text="📅 Resumen mensual"
+                    Clicked="VerResumenMensual_Clicked"
+                    HorizontalOptions="Center"
+                    TextColor="#ff1f4c"
+                    BackgroundColor="#F2D6FF"/>
+                    
 
-        <Button Text="📎 Compartir último archivo"
-                Clicked="CompartirArchivo_Clicked"
-                HorizontalOptions="Center"
-                TextColor="#ff1f4c"
-                BackgroundColor="#5c5863"/>
+            <Button Grid.Row="0" Grid.Column="1"
+                    Text="🗑 Limpiar calendario"
+                    Clicked="LimpiarCalendario_Clicked"
+                    HorizontalOptions="Center"
+                    TextColor="#ff1f4c"
+                    BackgroundColor="#F2D6FF"/>
+                    
 
+            <Button Grid.Row="1" Grid.Column="0"
+                    Text="📎 Compartir"
+                    Clicked="CompartirArchivo_Clicked"
+                    HorizontalOptions="Center"
+                    TextColor="#ff1f4c"
+                    BackgroundColor="#F2D6FF"/>
+
+            <Button Grid.Row="1" Grid.Column="1" 
+                    Text="📤 Exportar"
+                    Clicked="ExportarTurnos_Clicked"
+                    HorizontalOptions="Center"
+                    TextColor="#ff1f4c"
+                    BackgroundColor="#F2D6FF"/>
+        </Grid>
 
         <scheduler:SfScheduler x:Name="Calendario"
                                View="Month"
                                Tapped="Calendario_Tapped"
                                HeightRequest="500" 
-                               BackgroundColor="#b4dec1"/>
+                               BackgroundColor="#F2D6FF"
+                               FirstDayOfWeek="Monday"/>
+
+        <Picker x:Name="ModoPicker"
+                Title="Selecciona modo"
+                SelectedIndexChanged="ModoPicker_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Manual</x:String>
+                <x:String>Automático</x:String>
+            </Picker.Items>
+        </Picker>
 
     </VerticalStackLayout>
 </ContentPage>

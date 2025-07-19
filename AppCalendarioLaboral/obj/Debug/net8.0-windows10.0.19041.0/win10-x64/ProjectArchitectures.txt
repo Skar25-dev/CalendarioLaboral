@@ -1,1 +1,0 @@
-C:\Users\Dani\source\repos\AppCalendarioLaboral\AppCalendarioLaboral\AppCalendarioLaboral.csproj;x64
