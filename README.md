@@ -31,6 +31,22 @@ Calendario Laboral es una app de single-page diseñada para trabajadores a turno
 
 ---
 
+## 📸 Galería
+
+### 📅 Vista Mensual
+Calendario con código de colores por tipo de turno: Mañana, Tarde, Noche, Libre y Vacaciones.
+![Calendario](docs/screenshots/calendar_view.png)
+
+### ✏️ Asignación de Turno
+Menú contextual emergente al tocar un día para asignar o modificar el turno.
+![Asignación](docs/screenshots/shift_menu.png)
+
+### 📋 Resumen Mensual
+Conteo agrupado por tipo de turno del mes en curso.
+![Resumen](docs/screenshots/monthly_summary.png)
+
+---
+
 ## 🎨 Código de Colores
 
 | Turno       | Color       | Hex       |
